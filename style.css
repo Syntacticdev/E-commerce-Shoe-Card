@@ -1,0 +1,185 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    grid-gap: 4em;
+}
+
+
+
+.shoe_card {
+    position: relative;
+    width: 300px;
+    height: 550px;;
+    background-color: #ddf091;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.display {
+   
+    height: 70%; 
+    clip-path: polygon(0 0, 100% 0, 100% 69%, 0% 100%);
+    color: #fff;
+}
+
+
+
+.head {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    position: relative;
+}
+
+.menu {
+    box-sizing: border-box;
+    background: #fff;
+    color: red;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.menu:hover {
+    background-color: #ddf091;
+    color: #fff;
+}
+
+button {
+    cursor: pointer;
+}
+
+.slang {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.slang span {
+    font-size: 40px;
+    font-family: Audiowide;
+    font-weight: 900;
+    pointer-events: none;
+}
+
+.product_logo {
+    width: 100px;
+}
+.product_image {
+    position: absolute;
+    right: 0;
+    bottom: 10%;
+    width: 300px;
+    z-index: 999;
+    pointer-events: none;
+}
+
+.product_image:hover {
+    z-index: -999;
+}
+.details {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 150px;
+}
+
+.price {
+    align-self: flex-end;
+    color: #2152ad;
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+.add_to_cart {
+    align-self: center;
+    width: 70%;
+    padding: 10px;
+    border-radius: 35px;
+    border: none;
+    outline: none;
+    background-color: #5583d9;
+    color: #fff;
+}
+
+.add_to_cart:hover {
+    background-color: #ce2fbd;
+}
+
+.category {
+    color: #2d52aa;
+    align-self: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.nike .display {
+    background:  url('./images/background1.jpg');
+    background-position: center;
+}
+
+.adidas {
+    background-color: #ddd;
+}
+
+.adidas .display {
+    background:  url('./images/background2.jpg');
+    background-position: center;
+    clip-path: none;
+    height: 65%;
+}
+
+.adidas .menu:hover {
+    background-color: #4b0b44;
+    color: #fff;
+}
+
+.adidas .product_image{
+    bottom: 15%;
+}
+
+.adidas .menu  {
+    color: #3742d2;
+}
+
+.adidas .slang {
+    align-items: center;
+    font-weight: 900;
+    font-size: 25px;
+}
+
+.adidas .details {
+    margin-top: 30px;
+}
+
+.adidas .price {
+    color: #3742d2;
+}
+
+.adidas .add_to_cart {
+    background-color: #ce2fbd;
+}
+
+.adidas  .add_to_cart:hover {
+    background-color:  #1f4792;
+}
+
+
+@media (max-width: 960px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
